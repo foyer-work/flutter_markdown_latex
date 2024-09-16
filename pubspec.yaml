@@ -1,7 +1,8 @@
 name: flutter_markdown_latex
 description: A extension to render LaTeX in markdown for package flutter_markdown.
 version: 0.3.4
-homepage: https://github.com/xushengs/flutter_markdown_latex
+
+publish_to: 'none'
 
 environment:
   sdk: ">=3.1.5 <4.0.0"
@@ -10,7 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_markdown: ">=0.6.18+3 <0.8.0"
+  flutter_markdown:
+    git: https://github.com/foyer-work/flutter_markdown
   flutter_math_fork: ^0.7.2
   markdown: ^7.1.1
 
