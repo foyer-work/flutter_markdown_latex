@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:foyer_markdown/foyer_markdown.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:markdown/markdown.dart' as md;
-
-import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
 
 import 'golden_diff_comparator.dart';
 
@@ -50,17 +49,14 @@ This is not inline latex: \$\$\$c = \\pm\\sqrt{a^2 + b^2}\$\$\$
 a\$}
 \$\$
 ''',
-  'inline latex with \$ inside':
-      'this is inline latex: \$a\\raisebox{0.25em}{\$b\$}c\$',
+  'inline latex with \$ inside': 'this is inline latex: \$a\\raisebox{0.25em}{\$b\$}c\$',
   'inline latex with a question mark after': 'this is inline latex: \$x\$?',
   'inline latex with an exclamation mark after': 'this is inline latex: \$x\$!',
   'inline latex with a period after': 'this is inline latex: \$x\$.',
   'inline latex with a comma after': 'this is inline latex: \$x\$,',
   'inline latex with a colon after': 'this is inline latex: \$x\$:',
-  'inline latex \$\$...\$':
-      'this is not latex: \$\$a\\raisebox{0.25em}{\$b\$}c\$',
-  'inline latex \$...\$\$':
-      'this is not latex: \$a\\raisebox{0.25em}{\$b\$}c\$\$',
+  'inline latex \$\$...\$': 'this is not latex: \$\$a\\raisebox{0.25em}{\$b\$}c\$',
+  'inline latex \$...\$\$': 'this is not latex: \$a\\raisebox{0.25em}{\$b\$}c\$\$',
   'slash \$': 'must include space between latex and end delimiter: \$ \\\$ \$',
   'block slash \$': '''
 this is block latex:
@@ -136,8 +132,7 @@ void main() {
                   [LatexInlineSyntax()],
                 ),
                 styleSheet: MarkdownStyleSheet(
-                  p: const TextStyle(
-                      fontSize: 16, fontFamily: 'FlutterTest', height: 1),
+                  p: const TextStyle(fontSize: 16, fontFamily: 'FlutterTest', height: 1),
                 ),
               ),
             ),

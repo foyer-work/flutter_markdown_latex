@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_markdown_latex/flutter_markdown_latex.dart';
+import 'package:foyer_markdown/foyer_markdown.dart';
 import 'package:markdown/markdown.dart' as md;
 
 void main() {
